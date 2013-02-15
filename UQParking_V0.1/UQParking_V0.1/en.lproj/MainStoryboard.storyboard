@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller - Park Now-->
+        <scene sceneID="gzg-Gr-rDK">
+            <objects>
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="b0Q-oI-MQ6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Park Now" image="parknow30.png" id="jCa-rg-b8m"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="CJg-p4-wzE">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="rfe-BX-jdl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dFD-xC-gjo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="636" y="-165"/>
+        </scene>
+        <!--First View Controller Test-->
+        <scene sceneID="bnC-yt-Qcc">
+            <objects>
+                <viewController id="qzm-Dp-awX" customClass="FirstViewControllerTest" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m33-PS-g1w">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="lid-La-rG0">
+                                <rect key="frame" x="0.0" y="136" width="320" height="230"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="YKd-Sr-OAa">
+                                <rect key="frame" x="141" y="286" width="38" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wz8-Kh-pVu"/>
+                    <connections>
+                        <outlet property="ParkingAreasControlViews" destination="YKd-Sr-OAa" id="Y7k-PX-Cm1"/>
+                        <outlet property="ParkingAreasScrollView" destination="lid-La-rG0" id="Pkn-ix-ViG"/>
+                        <outlet property="parkingAreasControlViews" destination="YKd-Sr-OAa" id="1yh-8h-lLv"/>
+                        <outlet property="parkingAreasPageControl" destination="YKd-Sr-OAa" id="YbV-Yl-9eE"/>
+                        <outlet property="parkingAreasScrollView" destination="lid-La-rG0" id="EIV-oK-SqE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nsg-fc-SYV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3364" y="-857"/>
+        </scene>
+        <!--First View Controller - First-->
+        <scene sceneID="11">
+            <objects>
+                <viewController title="First" id="2" customClass="FirstViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="16">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="JPG-fI-KVs">
+                                <rect key="frame" x="18" y="8" width="284" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="2oU-rN-d5c">
+                                <rect key="frame" x="135" y="431" width="175" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" id="mDW-rk-hjc">
+                                <rect key="frame" x="-10" y="198" width="340" height="145"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" id="xvf-GQ-0lF">
+                                        <rect key="frame" x="151" y="118" width="38" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="slidePage:" destination="2" eventType="valueChanged" id="dds-M0-Vrk"/>
+                                            <segue destination="Xfr-ZN-ye4" kind="push" identifier="firstControllerToParkingAreasSegue" id="cqz-HM-5I2"/>
+                                        </connections>
+                                    </pageControl>
+                                </subviews>
+                            </scrollView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Slide to select a parking area" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="hlh-tc-tvs">
+                                <rect key="frame" x="20" y="146" width="236" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XOt-e5-QdI"/>
+                    <connections>
+                        <outlet property="applicationName" destination="JPG-fI-KVs" id="SII-DB-pri"/>
+                        <outlet property="parkingPageControl" destination="xvf-GQ-0lF" id="ilg-AC-dKQ"/>
+                        <outlet property="parkingScrollView" destination="mDW-rk-hjc" id="nRE-uL-ht9"/>
+                        <outlet property="uqLogo" destination="2oU-rN-d5c" id="frV-wk-5R9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1078" y="-165"/>
+        </scene>
+        <!--Parking Areas - ParkingAreas-->
+        <scene sceneID="ghI-Kb-V8X">
+            <objects>
+                <viewController title="ParkingAreas" hidesBottomBarWhenPushed="YES" id="Xfr-ZN-ye4" customClass="ParkingAreas" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s8Q-IR-5ea">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="2aS-hS-UqH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Xfr-ZN-ye4" id="5Hb-X8-PFT"/>
+                                </connections>
+                            </mapView>
+                            <label clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" text="40% - 0%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Toq-mq-eIJ">
+                                <rect key="frame" x="218" y="481" width="64" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.85490202903747559" green="0.23137256503105164" blue="0.26666668057441711" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" text="70% - 40%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bh7-95-Vas">
+                                <rect key="frame" x="146" y="481" width="64" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.92941182851791382" green="0.76862752437591553" blue="0.21568629145622253" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TA4-fM-QBT">
+                                <rect key="frame" x="257" y="418" width="72" height="94"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="pagecurl2.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="IT8-ND-ekt" kind="modal" identifier="StyleSegue" modalTransitionStyle="partialCurl" id="ge3-jG-pAA"/>
+                                </connections>
+                            </button>
+                            <label clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" text="100% -90%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cWx-an-lKW">
+                                <rect key="frame" x="0.0" y="481" width="66" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.59607845544815063" green="0.79215693473815918" blue="0.30980393290519714" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" text="90% - 70%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Nwi-zs-yEl">
+                                <rect key="frame" x="74" y="481" width="64" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.89019614458084106" green="0.5372549295425415" blue="0.10196079313755035" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EWI-KM-TvD">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="wCD-em-LR0">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="XJV-ST-t3w">
+                                <rect key="frame" x="267" y="-6" width="48" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="parknow60.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showCurrentLocation:" destination="Xfr-ZN-ye4" eventType="touchUpInside" id="PQF-yK-896"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="currentLocationButton" destination="XJV-ST-t3w" id="OQv-2z-oM2"/>
+                        <outlet property="parkingAreasMapView" destination="2aS-hS-UqH" id="BP5-2u-22H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ba0-Dj-V7x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1768" y="160"/>
+        </scene>
+        <!--Map Style View Controller-->
+        <scene sceneID="238-zO-kMG">
+            <objects>
+                <viewController id="IT8-ND-ekt" customClass="MapStyleViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7eS-SV-jHo">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fBL-1p-OUi">
+                                <rect key="frame" x="20" y="419" width="133" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" red="0.22352942819999999" green="0.48235297199999999" blue="0.7254902124" alpha="1" colorSpace="deviceRGB"/>
+                                <state key="normal" title="Facebook">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="postOnFacebook:" destination="IT8-ND-ekt" eventType="touchUpInside" id="xzX-Mo-6uU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TMu-xQ-w68">
+                                <rect key="frame" x="167" y="419" width="133" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <color key="tintColor" red="0.22352942819999999" green="0.48235297199999999" blue="0.7254902124" alpha="1" colorSpace="deviceRGB"/>
+                                <state key="normal" title="Twitter">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="postOnTwitter:" destination="IT8-ND-ekt" eventType="touchUpInside" id="nag-VH-r1V"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="RGp-5L-LXH">
+                                <rect key="frame" x="20" y="485" width="280" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <segments>
+                                    <segment title="Map"/>
+                                    <segment title="Satelite"/>
+                                    <segment title="Hybrid"/>
+                                </segments>
+                                <connections>
+                                    <action selector="mapStyleChange:" destination="IT8-ND-ekt" eventType="valueChanged" id="Z6V-Jz-Xgl"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="mapStyleSegmentControl" destination="RGp-5L-LXH" id="nMP-KT-yLc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HnC-py-Nfi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2275" y="160"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="15">
+            <objects>
+                <tabBarController id="4" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="5">
+                        <rect key="frame" x="0.0" y="431" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="b0Q-oI-MQ6" kind="relationship" relationship="viewControllers" id="uef-fI-64C"/>
+                        <segue destination="nX2-mq-Vfr" kind="relationship" relationship="viewControllers" id="rZR-mi-XpE"/>
+                        <segue destination="tD4-ub-eeG" kind="relationship" relationship="viewControllers" id="8c7-6j-Ant"/>
+                        <segue destination="SGb-Wx-4FJ" kind="relationship" relationship="viewControllers" id="SYu-7u-6Kj"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="148" y="160"/>
+        </scene>
+        <!--Second View Controller - Root View Controller-->
+        <scene sceneID="xzr-Jq-T3V">
+            <objects>
+                <tableViewController id="SOQ-Nd-v3f" customClass="SecondViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" id="m1e-gQ-nDh">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <datePicker key="tableFooterView" contentMode="bottom" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" datePickerMode="dateAndTime" minuteInterval="30" id="ORP-ys-TLf">
+                            <rect key="frame" x="0.0" y="72" width="320" height="216"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <date key="date" timeIntervalSinceReferenceDate="364485600.51837099">
+                                <!--2012-07-20 14:00:00 +0000-->
+                            </date>
+                            <date key="minimumDate" timeIntervalSinceReferenceDate="364485600">
+                                <!--2012-07-20 14:00:00 +0000-->
+                            </date>
+                            <date key="maximumDate" timeIntervalSinceReferenceDate="366472799">
+                                <!--2012-08-12 13:59:59 +0000-->
+                            </date>
+                            <locale key="locale" localeIdentifier="en_US"/>
+                            <timeZone key="timeZone" name="America/Los_Angeles">
+                                <data key="data">
+VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
+y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
+5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
+8n/BkPNvwKD0X6OQ9U+ioPY/hZD3L4Sg+CiiEPkPZqD6CIQQ+viDIPvoZhD82GUg/chIEP64RyD/qCoQ
+AJgpIAGIDBACeAsgA3EokARhJ6AFUQqQBkEJoAcw7JAHjUOgCRDOkAmtvyAK8LCQC+CvoAzZzRANwJGg
+DrmvEA+priAQmZEQEYmQIBJ5cxATaXIgFFlVEBVJVCAWOTcQFyk2IBgiU5AZCRggGgI1kBryNKAb4heQ
+HNIWoB3B+ZAesfigH6HbkCB2KyAhgb2QIlYNICNq2hAkNe8gJUq8ECYV0SAnKp4QJ/7toCkKgBAp3s+g
+KupiECu+saAs036QLZ6ToC6zYJAvfnWgMJNCkDFnkiAycySQM0d0IDRTBpA1J1YgNjLokDcHOCA4HAUQ
+OOcaIDn75xA6xvwgO9vJEDywGKA9u6sQPo/6oD+bjRBAb9ygQYSpkEJPvqBDZIuQRC+goEVEbZBF89Mg
+Ry2KEEfTtSBJDWwQSbOXIErtThBLnLOgTNZqkE18laBOtkyQT1x3oFCWLpBRPFmgUnYQkFMcO6BUVfKQ
+VPwdoFY11JBW5TogWB7xEFjFHCBZ/tMQWqT+IFvetRBchOAgXb6XEF5kwiBfnnkQYE3eoGGHlZBiLcCg
+Y2d3kGQNoqBlR1mQZe2EoGcnO5BnzWagaQcdkGmtSKBq5v+Qa5ZlIGzQHBBtdkcgbq/+EG9WKSBwj+AQ
+cTYLIHJvwhBzFe0gdE+kEHT/CaB2OMCQdt7roHgYopB4vs2gefiEkHqer6B72GaQfH6RoH24SJB+XnOg
+f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
+</data>
+                            </timeZone>
+                        </datePicker>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="carparkCell" textLabel="lUy-ZV-BtG" detailTextLabel="AzA-k2-KFi" rowHeight="50" style="IBUITableViewCellStyleSubtitle" id="sbX-IT-7tY">
+                                <rect key="frame" x="0.0" y="22" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="49"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="UQ Centre Parking" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lUy-ZV-BtG">
+                                            <rect key="frame" x="10" y="5" width="161" height="22"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AzA-k2-KFi">
+                                            <rect key="frame" x="10" y="27" width="36" height="18"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="SOQ-Nd-v3f" id="bXl-hj-yUW"/>
+                            <outlet property="delegate" destination="SOQ-Nd-v3f" id="pcy-xA-zcg"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="2MU-1f-J7T"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="leN-ya-Idh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2408" y="1968"/>
+        </scene>
+        <!--Second View Controller For Test View Controller-->
+        <scene sceneID="TQS-c5-XgB">
+            <objects>
+                <viewController id="NWq-cN-aCq" customClass="SecondViewControllerForTestViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jfg-4g-AOJ" customClass="second">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qM6-uz-2Vu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x0D-qP-o93" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2746" y="1697"/>
+        </scene>
+        <!--Parking Area Names Table View Controller-->
+        <scene sceneID="Fm4-Og-buF">
+            <objects>
+                <tableViewController id="BLg-Iu-YWa" customClass="ParkingAreaNamesTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="71" sectionHeaderHeight="22" sectionFooterHeight="22" id="Zwl-dt-7W0">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <datePicker key="tableFooterView" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" id="kJ0-eX-oZz">
+                            <rect key="frame" x="0.0" y="93" width="320" height="216"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <date key="date" timeIntervalSinceReferenceDate="365051518.55604398">
+                                <!--2012-07-27 03:11:58 +0000-->
+                            </date>
+                            <locale key="locale" localeIdentifier="en_US"/>
+                            <timeZone key="timeZone" name="America/Los_Angeles">
+                                <data key="data">
+VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
+y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
+5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
+8n/BkPNvwKD0X6OQ9U+ioPY/hZD3L4Sg+CiiEPkPZqD6CIQQ+viDIPvoZhD82GUg/chIEP64RyD/qCoQ
+AJgpIAGIDBACeAsgA3EokARhJ6AFUQqQBkEJoAcw7JAHjUOgCRDOkAmtvyAK8LCQC+CvoAzZzRANwJGg
+DrmvEA+priAQmZEQEYmQIBJ5cxATaXIgFFlVEBVJVCAWOTcQFyk2IBgiU5AZCRggGgI1kBryNKAb4heQ
+HNIWoB3B+ZAesfigH6HbkCB2KyAhgb2QIlYNICNq2hAkNe8gJUq8ECYV0SAnKp4QJ/7toCkKgBAp3s+g
+KupiECu+saAs036QLZ6ToC6zYJAvfnWgMJNCkDFnkiAycySQM0d0IDRTBpA1J1YgNjLokDcHOCA4HAUQ
+OOcaIDn75xA6xvwgO9vJEDywGKA9u6sQPo/6oD+bjRBAb9ygQYSpkEJPvqBDZIuQRC+goEVEbZBF89Mg
+Ry2KEEfTtSBJDWwQSbOXIErtThBLnLOgTNZqkE18laBOtkyQT1x3oFCWLpBRPFmgUnYQkFMcO6BUVfKQ
+VPwdoFY11JBW5TogWB7xEFjFHCBZ/tMQWqT+IFvetRBchOAgXb6XEF5kwiBfnnkQYE3eoGGHlZBiLcCg
+Y2d3kGQNoqBlR1mQZe2EoGcnO5BnzWagaQcdkGmtSKBq5v+Qa5ZlIGzQHBBtdkcgbq/+EG9WKSBwj+AQ
+cTYLIHJvwhBzFe0gdE+kEHT/CaB2OMCQdt7roHgYopB4vs2gefiEkHqer6B72GaQfH6RoH24SJB+XnOg
+f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
+</data>
+                            </timeZone>
+                            <connections>
+                                <action selector="planParkingDatePickerValueChange:" destination="BLg-Iu-YWa" eventType="valueChanged" id="mpV-l8-0g7"/>
+                            </connections>
+                        </datePicker>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Parking Areas Names" textLabel="vEW-Be-S0A" detailTextLabel="L7u-ms-Y6m" rowHeight="71" style="IBUITableViewCellStyleSubtitle" id="zKW-RV-sBf">
+                                <rect key="frame" x="0.0" y="22" width="320" height="71"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vEW-Be-S0A">
+                                            <rect key="frame" x="10" y="15" width="38" height="22"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="L7u-ms-Y6m">
+                                            <rect key="frame" x="10" y="37" width="47" height="18"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="Xfr-ZN-ye4" kind="push" identifier="secondControllerToParkingAreasSegue" id="0kj-PH-B4y"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="BLg-Iu-YWa" id="p89-7J-5Jq"/>
+                            <outlet property="delegate" destination="BLg-Iu-YWa" id="RMm-C0-EYe"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="8IQ-8Z-8Dd"/>
+                    <connections>
+                        <outlet property="planParkingDatePicker" destination="kJ0-eX-oZz" id="IWS-CC-roO"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Ta-we-5mZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1078" y="476"/>
+        </scene>
+        <!--Navigation Controller - Item-->
+        <scene sceneID="KEr-Wy-0eX">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="SGb-Wx-4FJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="zhX-4h-foK"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IMf-hg-xtQ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="4Yb-8c-3kd" kind="relationship" relationship="rootViewController" id="29Y-ma-FnZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HlT-mm-uE5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="636" y="2089"/>
+        </scene>
+        <!--Parkometer Set Timer View Controller-->
+        <scene sceneID="Kbe-j7-YZp">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="4Yb-8c-3kd" customClass="ParkometerSetTimerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l7r-yw-J7h">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="wZR-Qm-O1D" customClass="ParkometerTimerView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8zy-Fg-Yu1">
+                                        <rect key="frame" x="139" y="149" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="XnN-dp-6Oi" appends="YES" id="f1n-ki-rZN"/>
+                                    <outletCollection property="gestureRecognizers" destination="XnN-dp-6Oi" appends="YES" id="Wua-TK-LB9"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="XnN-dp-6Oi" appends="YES" id="986-Jd-mDy"/>
+                            <outletCollection property="gestureRecognizers" destination="XnN-dp-6Oi" appends="YES" id="Ruo-IC-FYf"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="p9t-m0-s5Z"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="parkometerUIView" destination="wZR-Qm-O1D" id="QzQ-ba-QXM"/>
+                        <outlet property="timerLabel" destination="8zy-Fg-Yu1" id="4Lt-gN-0xH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hRv-C8-Sir" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="XnN-dp-6Oi">
+                    <connections>
+                        <outlet property="delegate" destination="wZR-Qm-O1D" id="WWC-k8-iau"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1085" y="2089"/>
+        </scene>
+        <!--Navigation Controller - Parkometer-->
+        <scene sceneID="Lid-gn-cCu">
+            <objects>
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="tD4-ub-eeG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Parkometer" image="Parkometer.png" id="lq4-hg-IDd"/>
+                    <navigationItem key="navigationItem" id="F2d-1j-QKg"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZmR-h8-gsX">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9A0-04-Zj8" kind="relationship" relationship="rootViewController" id="DVr-U1-uU0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qJX-mz-jBg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="636" y="1135"/>
+        </scene>
+        <!--Parkometer Map View Controller-->
+        <scene sceneID="iTp-if-4Vf">
+            <objects>
+                <viewController id="9A0-04-Zj8" customClass="ParkometerMapViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qpj-Zz-iq8">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="Q7J-oZ-VU3">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Your notes" minimumFontSize="17" clearButtonMode="whileEditing" id="giB-fx-AIn">
+                                <rect key="frame" x="20" y="447" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="9A0-04-Zj8" id="F7Q-fM-wK9"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" id="Bmy-BB-gMs">
+                                <rect key="frame" x="20" y="485" width="280" height="51"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="5"/>
+                                <state key="normal" title="Timer">
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="gyI-bR-RmO" kind="push" id="Ug2-bv-6PX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="6IA-Gl-qOr">
+                                <rect key="frame" x="20" y="63" width="18" height="19"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kd9-GL-mRj"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="helpButton" destination="6IA-Gl-qOr" id="277-Jv-DDJ"/>
+                        <outlet property="parkometerMapView" destination="Q7J-oZ-VU3" id="SoP-7t-5xn"/>
+                        <outlet property="textField" destination="giB-fx-AIn" id="9TZ-2m-GnN"/>
+                        <outlet property="timeButton" destination="Bmy-BB-gMs" id="KSP-eZ-4Zf"/>
+                        <outlet property="view" destination="qpj-Zz-iq8" id="min-gO-CSN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vbc-X5-9Rx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1078" y="1129"/>
+        </scene>
+        <!--Parkometer View Controller-->
+        <scene sceneID="93R-J4-XEi">
+            <objects>
+                <viewController wantsFullScreenLayout="YES" hidesBottomBarWhenPushed="YES" id="gyI-bR-RmO" customClass="ParkometerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EiS-ko-BUl">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="cgt-wh-wpY">
+                                <rect key="frame" x="20" y="455" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <gestureRecognizers/>
+                                <segments>
+                                    <segment title="Slow"/>
+                                    <segment title="Normal"/>
+                                    <segment title="Fast"/>
+                                </segments>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" id="rhM-nZ-enM" customClass="XYPieChart">
+                                <rect key="frame" x="0.0" y="20" width="320" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="12:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Aal-gw-Fif">
+                                        <rect key="frame" x="103" y="131" width="114" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="p8Q-qb-9ZY">
+                                <rect key="frame" x="24" y="404" width="65" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearSlices" destination="gyI-bR-RmO" eventType="touchUpInside" id="61v-za-fhP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="nvt-EQ-GEe" appends="YES" id="HhS-Lw-3ZH"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="Oqh-DW-I3z"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="parkometerPieChartView" destination="rhM-nZ-enM" id="qQv-li-3by"/>
+                        <outlet property="view" destination="EiS-ko-BUl" id="f6h-4U-O3H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8jj-QN-rPa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="nvt-EQ-GEe">
+                    <connections>
+                        <outlet property="delegate" destination="EiS-ko-BUl" id="7jA-Aa-lB9"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1590" y="1129"/>
+        </scene>
+        <!--Navigation Controller - Plan Parking-->
+        <scene sceneID="Icj-Aq-jGY">
+            <objects>
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="nX2-mq-Vfr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Plan Parking" image="planpark30.png" id="0pJ-Vh-5OD"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="9lL-ct-Udu">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BLg-Iu-YWa" kind="relationship" relationship="rootViewController" id="OCR-mA-lsr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rrP-jD-96s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="636" y="476"/>
+        </scene>
+        <!--View Controller - First-->
+        <scene sceneID="4f7-qu-r0O">
+            <objects>
+                <viewController title="First" id="gd0-rF-pAc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ItI-gb-L7Q">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="6NL-0Y-f0h">
+                                <rect key="frame" x="18" y="8" width="284" height="240"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="dA3-Ou-hXH">
+                                <rect key="frame" x="135" y="343" width="175" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" id="dya-oE-7xy">
+                                <rect key="frame" x="-10" y="286" width="340" height="145"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </scrollView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Slide to select a parking area" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="xN9-hy-fWJ">
+                                <rect key="frame" x="0.0" y="168" width="236" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" id="W3r-G2-vTD">
+                                <rect key="frame" x="141" y="287" width="38" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="37a-nQ-Ane"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fms-XO-9vB" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1432" y="-876"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pEB-yy-bgk">
+            <objects>
+                <viewController id="PGC-dz-jo7" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Gp7-sh-lGk">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bpv-OQ-dq0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3283" y="1413"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Parkometer.png" width="47" height="23"/>
+        <image name="pagecurl2.png" width="59" height="78"/>
+        <image name="parknow30.png" width="30" height="30"/>
+        <image name="parknow60.png" width="60" height="60"/>
+        <image name="planpark30.png" width="30" height="30"/>
+    </resources>
+    <classes>
+        <class className="FirstViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="slidePage:"/>
+                <relationship kind="outlet" name="applicationName" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="parkingPageControl" candidateClass="UIPageControl"/>
+                <relationship kind="outlet" name="parkingScrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="uqLogo" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="FirstViewControllerTest" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstViewControllerTest.h"/>
+            <relationships>
+                <relationship kind="outlet" name="parkingAreasPageControl" candidateClass="UIPageControl"/>
+                <relationship kind="outlet" name="parkingAreasScrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="MapStyleViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapStyleViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="mapStyleChange:"/>
+                <relationship kind="action" name="postOnFacebook:"/>
+                <relationship kind="action" name="postOnTwitter:"/>
+                <relationship kind="outlet" name="mapStyleSegmentControl" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+        <class className="ParkingAreaNamesTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ParkingAreaNamesTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="planParkingDatePickerValueChange:"/>
+                <relationship kind="outlet" name="planParkingDatePicker" candidateClass="UIDatePicker"/>
+            </relationships>
+        </class>
+        <class className="ParkingAreas" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ParkingAreas.h"/>
+            <relationships>
+                <relationship kind="action" name="showCurrentLocation:"/>
+                <relationship kind="outlet" name="currentLocationButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="parkingAreaViewControler" candidateClass="UIView"/>
+                <relationship kind="outlet" name="parkingAreasMapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="ParkometerMapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ParkometerMapViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="helpButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="parkometerMapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="timeButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="ParkometerSetTimerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ParkometerSetTimerViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="parkometerUIView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="timerLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ParkometerTimerView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ParkometerTimerView.h"/>
+        </class>
+        <class className="ParkometerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ParkometerViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="parkometerPieChartView" candidateClass="XYPieChart"/>
+            </relationships>
+        </class>
+        <class className="SecondViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SecondViewController.h"/>
+        </class>
+        <class className="SecondViewControllerForTestViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SecondViewControllerForTestViewController.h"/>
+        </class>
+        <class className="XYPieChart" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/XYPieChart.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="cqz-HM-5I2"/>
+    </inferredMetricsTieBreakers>
+</document>
